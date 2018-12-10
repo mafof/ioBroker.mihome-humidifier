@@ -1,0 +1,42 @@
+{
+  "name": "iobroker.mihome-humidifier",
+  "version": "1.0.0",
+  "description": "mihome-humidifier",
+  "author": {
+    "name": "mafof"
+  },
+  "contributors": [
+    {
+      "name": "mafof"
+    }
+  ],
+  "homepage": "https://github.com/mafof/iobroker.mihome-humidifier",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "mihome-humidifier",
+    "Smart Home",
+    "home automation",
+    "humidifier",
+    "mihome"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafof/ioBroker.mihome-humidifier"
+  },
+  "dependencies": {
+    "miio-controller": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "gulp-deploy-ftp": "^1.0.1",
+    "gulp-ftp": "^1.1.0",
+    "mocha": "^4.1.0"
+  },
+  "main": "main.js",
+  "bugs": {
+    "url": "https://github.com/mafof/ioBroker.mihome-humidifier/issues"
+  },
+  "readmeFilename": "README.md"
+}
