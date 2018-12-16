@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "mihome-humidifier",
-        "version": "0.1.0",
+        "version": "0.2.0",
 		"title": "mihome-humidifier Adapter",
         "titleLang": {
             "en": "mihome humidifier adapter",
