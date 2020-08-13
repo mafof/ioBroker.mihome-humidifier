@@ -56,7 +56,7 @@ function setNameInstanceAdapter(name) {
 
     let instanceName = adapter.name + '.' + adapter.instance;
 
-    adapter.objects.getObject(instanceName, function (err, obj) {
+    adapter.objects(instanceName, function (err, obj) {
         if(err) return adapter.log.error(err), false;
         
         obj.common.name = name;
