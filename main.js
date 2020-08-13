@@ -60,6 +60,6 @@ function setNameInstanceAdapter(name) {
         if(err) return adapter.log.error(err), false;
         
         obj.common.name = name;
-        adapter.objects.setObject(instanceName, obj);
+        adapter.objects(instanceName, obj);
     });
 }
