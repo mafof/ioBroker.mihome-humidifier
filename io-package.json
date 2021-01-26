@@ -1,232 +1,256 @@
 {
-    "common": {
-        "name": "mihome-humidifier",
-        "version": "0.2.0",
-		"title": "mihome-humidifier Adapter",
-        "titleLang": {
-            "en": "mihome humidifier adapter",
-            "ru": "mihome humidifier adapter"
-        },
-        "desc": {
-            "en": "Adapter controlling device humidifier for Xiaomi",
-            "ru": "Адаптер управления увлажнителями воздуха от Xiaomi"
-        },
-        "authors": [
-            "mafof"
-        ],
-        "platform": "Javascript/Node.js",
-        "mode": "daemon",
-        "icon": "mihome-humidifier.png",
-        "materialize": true,
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/mafof/ioBroker.mihome-humidifier/master/admin/mihome-humidifier.png",
-        "keywords": ["mihome-humidifier", "miio", "humidifier-adapter"],
-        "readme": "https://github.com/mafof/ioBroker.mihome-humidifier/blob/master/README.md",
-        "loglevel": "info",
-        "type": "general",
-        "license": "MIT",
-        "messagebox": false,
-        "restartAdapters": ["vis"]
+  "common": {
+    "name": "mihome-humidifier",
+    "version": "0.2.0",
+    "title": "mihome-humidifier Adapter",
+    "titleLang": {
+      "en": "mihome humidifier adapter",
+      "ru": "mihome humidifier adapter"
     },
-    "native": {
-        "name": "",
-        "ip": "",
-        "token": "",
-        "port": 54321,
-        "poolingInterval": 3
+    "desc": {
+      "en": "Adapter controlling device humidifier for Xiaomi",
+      "ru": "Адаптер управления увлажнителями воздуха от Xiaomi"
     },
-    "instanceObjects": [
-        {
-            "_id": "",
-            "type": "device",
-            "common": {
-                "name": "Humidifier"
-            },
-            "native": {}
-        },
-
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Humidifier Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "control",
-            "type": "channel",
-            "common": {
-                "name": "Humidifier Control"
-            },
-            "native": {}
-        },
-
-        {
-            "_id": "info.name",
-            "type": "state",
-            "common": {
-                "name": "Name device",
-                "type": "string",
-                "read": true,
-                "write": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.address",
-            "type": "state",
-            "common": {
-                "name": "Ip address device",
-                "type": "string",
-                "read": true,
-                "write": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.port",
-            "type": "state",
-            "common": {
-                "name": "Port to device",
-                "type": "number",
-                "read": true,
-                "write": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.token",
-            "type": "state",
-            "common": {
-                "name": "Token device",
-                "type": "string",
-                "read": true,
-                "write": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.depth",
-            "type": "state",
-            "common": {
-                "name": "Depth wather in device",
-                "type": "number",
-                "read": true,
-                "write": false,
-                "unit": "%"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.speed",
-            "type": "state",
-            "common": {
-                "name": "Speed in device",
-                "type": "number",
-                "read": true,
-                "write": false
-            },
-            "native": {}
-        },
-
-        {
-            "_id": "info.temp",
-            "type": "state",
-            "common": {
-                "name": "Temperature",
-                "type": "number",
-                "read": true,
-                "write": false,
-                "unit": "℃",
-                "role": "value.temperature"
-            },
-            "native": {}
-        },
-
-        {
-            "_id": "info.humidity",
-            "type": "state",
-            "common": {
-                "name": "Humidity",
-                "type": "number",
-                "read": true,
-                "write": false,
-                "unit": "%",
-                "role": "value.humidity"
-            },
-            "native": {}
-        },
-
-        {
-            "_id": "info.availability",
-            "type": "state",
-            "common": {
-                "name": "Availability device",
-                "type": "boolean",
-                "read": true,
-                "write": false
-            },
-            "native": {}
-        },
-
-        {
-            "_id": "control.power",
-            "type": "state",
-            "common": {
-                "name": "Status power device",
-                "type": "boolean",
-                "read": true,
-                "write": true,
-                "role": "switch"
-            },
-            "native": {}
-        },
-        {
-            "_id": "control.mode",
-            "type": "state",
-            "common": {
-                "name": "Mode level device",
-                "type": "string",
-                "read": true,
-                "write": true
-            },
-            "native": {}
-        },
-        {
-            "_id": "control.led",
-            "type": "state",
-            "common": {
-                "name": "Led status in device",
-                "type": "number",
-                "read": true,
-                "write": true
-            },
-            "native": {}
-        },
-        {
-            "_id": "control.buzzer",
-            "type": "state",
-            "common": {
-                "name": "Buzzer device",
-                "type": "boolean",
-                "read": true,
-                "write": true,
-                "role": "switch"
-            },
-            "native": {}
-        },
-
-        {
-            "_id": "control.limit_hum",
-            "type": "state",
-            "common": {
-                "name": "Limit temperature for work auto mode in device",
-                "type": "number",
-                "read": true,
-                "write": true
-            },
-            "native": {}
-        }
-    ]
+    "authors": [
+      "mafof"
+    ],
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "icon": "mihome-humidifier.png",
+    "materialize": true,
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/mafof/ioBroker.mihome-humidifier/master/admin/mihome-humidifier.png",
+    "keywords": [
+      "mihome-humidifier",
+      "miio",
+      "humidifier-adapter"
+    ],
+    "readme": "https://github.com/mafof/ioBroker.mihome-humidifier/blob/master/README.md",
+    "loglevel": "info",
+    "type": "general",
+    "license": "MIT",
+    "messagebox": false,
+    "restartAdapters": [
+      "vis"
+    ],
+    "installedFrom": "https://github.com/mafof/ioBroker.mihome-humidifier/tarball/ba86ccdc3f279787f5a900c1a6cc69ea84e5b4a8"
+  },
+  "native": {
+    "name": "",
+    "ip": "",
+    "token": "",
+    "port": 54321,
+    "poolingInterval": 3
+  },
+  "instanceObjects": [
+    {
+      "_id": "",
+      "type": "device",
+      "common": {
+        "name": "Humidifier"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Humidifier Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control",
+      "type": "channel",
+      "common": {
+        "name": "Humidifier Control"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.name",
+      "type": "state",
+      "common": {
+        "name": "Name device",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.address",
+      "type": "state",
+      "common": {
+        "name": "Ip address device",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.port",
+      "type": "state",
+      "common": {
+        "name": "Port to device",
+        "type": "number",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.token",
+      "type": "state",
+      "common": {
+        "name": "Token device",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.depth",
+      "type": "state",
+      "common": {
+        "name": "Depth wather in device",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "unit": "%"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.speed",
+      "type": "state",
+      "common": {
+        "name": "Speed in device",
+        "type": "number",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.temp",
+      "type": "state",
+      "common": {
+        "name": "Temperature",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "unit": "℃",
+        "role": "value.temperature"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.humidity",
+      "type": "state",
+      "common": {
+        "name": "Humidity",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "unit": "%",
+        "role": "value.humidity"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.availability",
+      "type": "state",
+      "common": {
+        "name": "Availability device",
+        "type": "boolean",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.power",
+      "type": "state",
+      "common": {
+        "name": "Status power device",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "role": "switch"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.mode",
+      "type": "state",
+      "common": {
+        "name": "Mode level device",
+        "type": "string",
+        "read": true,
+        "write": true
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.led",
+      "type": "state",
+      "common": {
+        "name": "Led status in device",
+        "type": "number",
+        "read": true,
+        "write": true
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.buzzer",
+      "type": "state",
+      "common": {
+        "name": "Buzzer device",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "role": "switch"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.child_lock",
+      "type": "state",
+      "common": {
+        "name": "Child lock",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "role": "switch"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.dry",
+      "type": "state",
+      "common": {
+        "name": "Dry mode",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "role": "switch"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.limit_hum",
+      "type": "state",
+      "common": {
+        "name": "Limit temperature for work auto mode in device",
+        "type": "number",
+        "read": true,
+        "write": true
+      },
+      "native": {}
+    }
+  ]
 }
